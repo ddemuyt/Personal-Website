@@ -19,7 +19,6 @@ jobs:
   - job: Deploy
     dependsOn: Build
     condition: succeeded()
-    environment: 'production'
     steps:
     - script: echo Deploy your project here
       displayName: 'Deploy Project'
