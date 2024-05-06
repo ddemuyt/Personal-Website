@@ -9,6 +9,7 @@ jobs:
     steps:
     - script: dotnet build --configuration Release
       displayName: 'Build project'
+      workingDirectory: $(Build.SourcesDirectory)/drakedemuyt-website/ResumeWebsite.csproj
 
     - task: PublishBuildArtifacts@1
       inputs:
