@@ -7,7 +7,7 @@ pool:
 jobs:
   - job: Build
     steps:
-    - script: ls -la $(Build.SourcesDirectory)
+    - script: ls -la $(Build.SourcesDirectory)/drakedemuyt-website
       displayName: 'List directories at the source root'
     
     - script: dotnet build --configuration Release
