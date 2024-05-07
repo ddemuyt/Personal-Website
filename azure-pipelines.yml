@@ -12,7 +12,7 @@ jobs:
       - task: DotNetCoreCLI@2
         inputs:
           command: 'build'
-          projects: '/ResumeWebsite/wwwroot/'
+          # projects: '/ResumeWebsite/wwwroot/'
 
   - job: Deploy
     dependsOn: Build
