@@ -23,7 +23,7 @@ jobs:
         displayName: 'Deploy Project'
       # - task: AzureStaticWebApp@0
       #   inputs:
-      #     app_location: 'ResumeWebsite/wwwroot/'
+      #     
       #     azure_static_web_apps_api_token: $(token)
       #     production_branch: 'main'
           
@@ -31,7 +31,7 @@ jobs:
         submodules: true
       - task: AzureStaticWebApp@0
         inputs:
-          app_location: '/'
+          app_location: 'ResumeWebsite/wwwroot/'
           api_location: 'api'
           output_location: 'wwwroot'
         env:
