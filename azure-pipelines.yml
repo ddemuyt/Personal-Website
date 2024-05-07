@@ -7,21 +7,21 @@ pool:
 jobs:
   - job: Build
     steps:
-    - script: ls -la $(Build.SourcesDirectory)/drakedemuyt-website
-      displayName: 'List directories at the source root'
-    
-    - script: dotnet build --configuration Release
-      displayName: 'Build project'
-      workingDirectory: $(Build.SourcesDirectory)/drakedemuyt-website/ResumeWebsite.csproj
-    - task: PublishBuildArtifacts@1
-      inputs:
-        PathtoPublish: 'bin/Release/netcoreapp3.1/publish'
-        ArtifactName: 'drop'
-        publishLocation: 'Container'
+      - script: echo Building project . . .
+        displayName: 'Build Project'
+      - task: DotNetCoreCLI@2
+        inputs:
+          command: 'build'
+          projects: '**/ResumeWebsite.csproj'
 
   - job: Deploy
     dependsOn: Build
     condition: succeeded()
     steps:
-    - script: echo Deploy your project here
-      displayName: 'Deploy Project'
+      - script: echo Deploying project . . .
+        displayName: 'Deploy Project'
+      - task: AzureStaticWebApp@0
+        inputs:
+          app_location: 'ResumeWebsite/wwwroot/'
+          azure_static_web_apps_api_token: '6f4f3f1dea99d8b5b0a8db31b4ea1db17d2effc96e4f8023d04df9086b8885705-e65460c8-f427-46bb-859a-544278928389010396728'
+          production_branch: 'main'
