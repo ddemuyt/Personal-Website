@@ -14,6 +14,7 @@ jobs:
           command: 'build'
           projects: '**/consoleasync.csproj'
 
+
   - job: Deploy
     dependsOn: Build
     condition: succeeded()
@@ -23,5 +24,15 @@ jobs:
       - task: AzureStaticWebApp@0
         inputs:
           app_location: 'ResumeWebsite/wwwroot/'
-          azure_static_web_apps_api_token: '6f4f3f1dea99d8b5b0a8db31b4ea1db17d2effc96e4f8023d04df9086b8885705-e65460c8-f427-46bb-859a-544278928389010396728'
+          azure_static_web_apps_api_token: $(token)
           production_branch: 'main'
+          
+      - checkout: self
+        submodules: true
+      - task: AzureStaticWebApp@0
+        inputs:
+          app_location: '/'
+          api_location: 'api'
+          output_location: 'wwwroot'
+        env:
+          azure_static_web_apps_api_token: $(token)
