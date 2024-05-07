@@ -4,81 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Hub</title>
+    <!-- Include Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaeaea; /* Sharkskin Grey */
+            color: #333; /* Dark Grey */
+            margin-left: 20px; /* Add left margin */
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        section {
+            margin: 20px 0;
+        }
+        h2 {
+            color: #333;
+        }
+        h3 {
+            color: #666;
+        }
+        /* Electric Blue Accent */
+        a {
+            color: #007bff; /* Electric Blue */
+        }
+        /* Tangerine Accent */
+        strong {
+            color: #ff7f50; /* Tangerine */
+        }
+        /* Two-column layout */
+        .column {
+            float: left;
+            width: 50%;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Drake DeMuyt</h1>
-        <h3>Software Developer</h3>
-        <img src="/media/headshot.jpeg" style="float: right;">
-        <p>Dynamic Full Stack Developer with a strong foundation in communication and leadership. I aim to build technical skills towards a Senior-level developer, as well as embrace my interpersonal skills in a client-facing position and convention speaker. I am excited to provide my proficiency with any company and help grow its network.</p>
+    <header class="bg-gray-100 p-4 text-center">
+        <img src="/media/headshot.png" class="float-right">
+        <h1 class="text-gray-700">Drake DeMuyt</h1>
+        <h3 class="text-gray-600">Software Developer</h3>
+        <p class="leading-6">Dynamic Full Stack Developer with a strong foundation in communication and leadership. I aim to build technical skills towards a Senior-level developer, as well as embrace my interpersonal skills in a client-facing position and convention speaker. I am excited to provide my proficiency with any company and help grow its network.</p>
         <ul>
-            <li><a href="https://linkedin.com/in/drake-demuyt">LinkedIn</a></li>
-            <li><a href="https://github.com/ddemuyt">GitHub</a></li>
+            <li><img src="/media/linkedin.png" href="https://linkedin.com/in/drake-demuyt" class="text-blue-500"></li>
+            <li><img src="/media/github.png" href="https://github.com/ddemuyt" class="text-blue-500"></li>
         </ul>
     </header>
-    <h1>TEST</h1>
-    <section>
-        <h2>Experience</h2>
-        <h3>Cypress Mill Co — Software Developer</h3>
+    <section class="flex">
+        <h2 class="text-2xl font-bold">Experience</h2>
+        <h3 class="text-xl font-bold">Cypress Mill Co — Software Developer</h3>
         <p>Utilized Agile methodologies for feature development, site maintenance, and communication with product owners.
             Worked on a key data-filtering and cleaning feature for a company initiative that led to $1M growth for our client.
-            Applied tests in Python and JavaScript to increase code coverage by 40% in our and our clients’ repositories and catch over 100 bugs before release.
-            Delivered test-driven development, wrote over 50 issues within GitHub Projects, and spearheaded 15 peer-to-peer workshops on improving company efficiency and knowledge.
-            Future-proofed WebMACS, a compost control system interface app, using Python, TypeScript, and Lua which took Green Mountain Technologies to a global market.
-            Completed a remote form feature on a HIPAA-compliant SaaS project, called CharityTracker, which now serves over 20,000 clients worldwide.</p>
-        <h3>George Washington University Full Stack Development Certificate </h3>
-        <p>A 5-month full-stack development training program that provided the necessary tools and guidance to develop a full-stack web application.</p>
+            Applied tests in Python and JavaScript to increase code coverage by 40% in our and our clients' repositories and catch over 100 bugs before release.</p>
     </section>
-    <section>
-        <h2>Projects</h2>
-            <h3>Exchanging Hands</h3>
+    <section class="flex">
+        <div class="w-1/2 p-4">
+            <h2 class="text-2xl font-bold">Skills</h2>
+            <ul>
+                <li class="mb-2">Agile</li>
+                <li class="mb-2">Python</li>
+                <li class="mb-2">Django</li>
+                <li class="mb-2">React</li>
+                <li class="mb-2">JavaScript</li>
+                <li class="mb-2">GitHub</li>
+                <li class="mb-2">Docker</li>
+                <li class="mb-2">TDD</li>
+                <li class="mb-2">MySQL</li>
+                <li class="mb-2">Heroku</li>
+                <li class="mb-2">Asana</li>
+                <li class="mb-2">Milanote</li>
+                <li class="mb-2">Bulma</li>
+                <li class="mb-2">TailwindCSS</li>
+                <li class="mb-2">Bootstrap</li>
+                <li class="mb-2">jQuery</li>
+                <li class="mb-2">TypeScript</li>
+                <li class="mb-2">Go</li>
+                <li class="mb-2">Lua</li>
+                <li class="mb-2">Postman</li>
+                <li class="mb-2">MongoDB</li>
+                <li class="mb-2">Mongoose</li>
+                <li class="mb-2">AnyDesk</li>
+                <li class="mb-2">Azure</li>
+                <li class="mb-2">.NET</li>
+            </ul>
+        </div>
+        <div class="w-1/2 p-4">
+            <h2 class="text-2xl font-bold">Projects</h2>
+            <h3 class="text-xl font-bold">Exchanging Hands</h3>
             <p>React.js, charity application which used PayPal and Charity Navigator APIs to buy, sell, and donate funds to your favorite cause.</p>
-            <p><strong>My Focus:</strong> Project Management through Kanban, React.js components receiving MySQL and Charity Navigator API data, and Cart calculations for Total Price.</p>
+            <p><strong class="text-orange-500">My Focus:</strong> Project Management through Kanban, React.js components receiving MySQL and Charity Navigator API data, and Cart calculations for Total Price.</p>
 
-            <h3>Name vs. Skeleton</h3>
+            <h3 class="text-xl font-bold">Name vs. Skeleton</h3>
             <p>jQuery and MySQL powered, dungeon crawler / turn-based role-playing game with encrypted password generation, random enemy movement on an interval, and multiple levels of map design.</p>
-            <p><strong>My Focus:</strong> JavaScript and Design (CSS + Pixel Art) on the map and turn-based pages</p>
+            <p><strong class="text-orange-500">My Focus:</strong> JavaScript and Design (CSS + Pixel Art) on the map and turn-based pages</p>
 
-            <h3>fatbeats</h3>
+            <h3 class="text-xl font-bold">fatbeats</h3>
             <p>Bulma-styled experience planning app driven by Google Maps, Ticketmaster, and Open Weather APIs.</p>
-            <p><strong>My Focus:</strong> jQuery functions to add Ticketmaster and Open Weather API data to the client</p>      
+            <p><strong class="text-orange-500">My Focus:</strong> jQuery functions to add Ticketmaster and Open Weather API data to the client</p>      
+        </div>
     </section>
     <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Agile</li>
-            <li>Python</li>
-            <li>Django</li>
-            <li>ReactJavaScript</li>
-            <li>GitHub</li>
-            <li>Docker</li>
-            <li>TDD</li>
-            <li>MySQL</li>
-            <li>Heroku</li>
-            <li>AsanaMilanote</li>
-            <li>Bulma</li>
-            <li>TailwindCSS</li>
-            <li>Bootstrap</li>
-            <li>jQuery</li>
-            <li>TypeScript</li>
-            <li>Go</li>
-            <li>Lua</li>
-            <li>Postman</li>
-            <li>MongoDB</li>
-            <li>Mongoose</li>
-            <li>AnyDesk</li>
-            <li>Azure</li>
-            <li>.NET</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Education</h2>
-        <h3>George Washington University Full Stack Development Certificate 2020</h3>
+        <h2 class="text-2xl font-bold">Education</h2>
+        <h3 class="text-xl font-bold">George Washington University Full Stack Development Certificate 2020</h3>
         <p>Partnered with Trilogy Education Services</p>
-        <h3>University of Saint Francis Bachelor of Arts in Communication 2017</h3>
+        <h3 class="text-xl font-bold">University of Saint Francis Bachelor of Arts in Communication 2017</h3>
         <p>Public Relations Concentration with Highest Honors 3.9/4 Overall GPA</p>
     </section>
-    <footer>
-    </footer>
 </body>
 </html>
+
