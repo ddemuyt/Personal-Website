@@ -21,12 +21,6 @@ jobs:
     steps:
       - script: echo Deploying project . . .
         displayName: 'Deploy Project'
-      # - task: AzureStaticWebApp@0
-      #   inputs:
-      #     
-      #     azure_static_web_apps_api_token: $(token)
-      #     production_branch: 'main'
-          
       - checkout: self
         submodules: true
       - task: AzureStaticWebApp@0
